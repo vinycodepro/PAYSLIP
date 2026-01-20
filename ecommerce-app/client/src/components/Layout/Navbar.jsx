@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { useCart } from '../../contexts/CartContext';
+//import logo from '../../public/vincylogo';
 import {
   ShoppingCartIcon,
   UserIcon,
@@ -32,10 +33,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-white shadow-lg navbar-container sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
+         
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
               <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -53,7 +55,7 @@ const Navbar = () => {
               <div className="relative">
                 <input
                   type="text"
-                  placeholder="Search products..."
+                  placeholder="Search products"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -66,6 +68,7 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links - Desktop */}
+
           <div className="hidden md:flex items-center space-x-4">
             <Link
               to="/products"
@@ -176,24 +179,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Search Bar */}
-        <div className="md:hidden pb-3">
-          <form onSubmit={handleSearch}>
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search products..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center">
-                <MagnifyingGlassIcon className="h-5 w-5 text-gray-400" />
-              </div>
-            </div>
-          </form>
-        </div>
-
+        
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-200">

@@ -72,3 +72,37 @@
 .animate-spin {
   animation: spin 1s linear infinite;
 }
+/*all svgs*/
+svg {
+ width: 40px;
+  height: 40px;
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: #021733; /* Tailwind's gray-800 */
+} 
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgb(141, 168, 187);
+  position: sticky; /* Keeps it at the top */
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Space between links and cart */
+  align-items: center;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+}

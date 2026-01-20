@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { productService } from '../../services/productService';
 import ProductGrid from '../../components/Products/ProductGrid';
-import Loading from '../Shared/Loading';
+//import Loading from '../Shared/Loading';
 
 const Home = () => {
   const [featuredProducts, setFeaturedProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);//i must change this
 
   useEffect(() => {
     const fetchFeaturedProducts = async () => {
